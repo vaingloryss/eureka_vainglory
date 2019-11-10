@@ -9,3 +9,7 @@ Completed shut down of DiscoveryClient
 2、
 密码问题，导致服务注册失败，没有找到服务
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+
+3、关闭Xshell远程链接会导致服务器运行的服务立刻关闭。
+解决办法：
+sudo nohup java -jar uereka_server.jar &
