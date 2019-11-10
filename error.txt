@@ -1,0 +1,11 @@
+1、服务注册失败
+Completed shut down of DiscoveryClient
+添加web的starter
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+2、
+密码问题，导致服务注册失败，没有找到服务
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server

@@ -1,0 +1,17 @@
+server:
+  port: 19000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:19000/eureka
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true #服务显示的是ip而不是机器名
+spring:
+  application:
+    name: eureka_vainglory
+  security:
+    user:
+      password: sx96411
+      name: vainglory
