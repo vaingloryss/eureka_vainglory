@@ -1,13 +1,5 @@
 server:
   port: 19000
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:19000/eureka
-    fetch-registry: false
-    register-with-eureka: false
-  instance:
-    prefer-ip-address: true #服务显示的是ip而不是机器名
 spring:
   application:
     name: eureka_vainglory
@@ -15,3 +7,13 @@ spring:
     user:
       password: sx96411
       name: vainglory
+eureka:
+  server:
+    enable-self-preservation: false  #关闭自我保护模式
+    eviction-interval-timer-in-ms: 4000 #清理间隔，（单位 ms,默认60*1000）
+  client:
+    service-url:
+      defaultZone: http://vainglory:sx96411@localhost:19000/eureka
+    prefer-ip-address: true #服务显示的是ip而不是机器名
+    register-with-eureka: false #不注册
+    fetch-registry: false
